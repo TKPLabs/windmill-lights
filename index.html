@@ -20,6 +20,15 @@
 		<!-- Latest compiled and minified JavaScript -->
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 		<script type="text/javascript">
+			//$(function () {
+				
+			//});
+			$("#turn-on").click(function () {
+				$.get("https://agent.electricimp.com/vzuZT-B7gmlR?state=1");
+			});
+			$("#turn-off").click(function () {
+				$.get("https://agent.electricimp.com/vzuZT-B7gmlR?state=0");
+			});
 		</script>
 	</body>
 </html>
