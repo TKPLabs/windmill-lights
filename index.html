@@ -25,26 +25,22 @@
 			//});
 			$("#turn-on").click(function () {
 				$.ajax({
-					url: 'https://agent.electricimp.com/vzuZT-B7gmlR?state=1'
-					//data: myData,
-					type: 'GET',
-					crossDomain: true,
-					dataType: 'jsonp',
-					success: function() { alert("Success"); },
-					error: function() { alert('Failed!'); },
-					//beforeSend: setHeader
+					url: 'https://agent.electricimp.com/vzuZT-B7gmlR?state=1',
+					dataType: "jsonp",
+					success: function (data) {
+						console.log(data)
+						alert(data);
+					}
 				});
 			});
 			$("#turn-off").click(function () {
 				$.ajax({
-					url: 'https://agent.electricimp.com/vzuZT-B7gmlR?state=0'
-					//data: myData,
-					type: 'GET',
-					crossDomain: true,
-					dataType: 'jsonp',
-					success: function() { alert("Success"); },
-					error: function() { alert('Failed!'); },
-					//beforeSend: setHeader
+					url: 'https://agent.electricimp.com/vzuZT-B7gmlR?state=0',
+					dataType: "jsonp",
+					success: function (data) {
+						console.log(data)
+						alert(data);
+					}
 				});
 			});
 		</script>
