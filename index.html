@@ -25,7 +25,7 @@
 			//});
 			$("#turn-on").click(function () {
 				$.ajax({
-					url: 'https://agent.electricimp.com/vzuZT-B7gmlR?state=1',
+					url: 'https://agent.electricimp.com/vzuZT-B7gmlR?state=0,
 					dataType: "jsonp",
 					success: function (data) {
 						console.log(data)
@@ -35,7 +35,7 @@
 			});
 			$("#turn-off").click(function () {
 				$.ajax({
-					url: 'https://agent.electricimp.com/vzuZT-B7gmlR?state=0',
+					url: 'https://agent.electricimp.com/vzuZT-B7gmlR?state=1',
 					dataType: "jsonp",
 					success: function (data) {
 						console.log(data)
