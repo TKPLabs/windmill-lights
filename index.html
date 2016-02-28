@@ -24,10 +24,26 @@
 				
 			//});
 			$("#turn-on").click(function () {
-				$.get("https://agent.electricimp.com/vzuZT-B7gmlR?state=1");
+				$.ajax({
+					url: 'https://agent.electricimp.com/vzuZT-B7gmlR?state=1'
+					//data: myData,
+					type: 'GET',
+					dataType: 'jsonp',
+					success: function() { alert("Success"); },
+					error: function() { alert('Failed!'); },
+					//beforeSend: setHeader
+				});
 			});
 			$("#turn-off").click(function () {
-				$.get("https://agent.electricimp.com/vzuZT-B7gmlR?state=0");
+				$.ajax({
+					url: 'https://agent.electricimp.com/vzuZT-B7gmlR?state=0'
+					//data: myData,
+					type: 'GET',
+					dataType: 'jsonp',
+					success: function() { alert("Success"); },
+					error: function() { alert('Failed!'); },
+					//beforeSend: setHeader
+				});
 			});
 		</script>
 	</body>
