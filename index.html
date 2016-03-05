@@ -38,13 +38,13 @@
 			});
 			
 			$("#turn-on").click(function () {
-				$.get(agenturl + '?state=0', function (data) {
+				$.get(agenturl + '?state=1', function (data) {
 					$("#turn-on").hide();
 					$("#turn-off").show();
 				});
 			});
 			$("#turn-off").click(function () {
-				$.get(agenturl + '?state=1', function (data) {
+				$.get(agenturl + '?state=0', function (data) {
 					$("#turn-on").show();
 					$("#turn-off").hide();
 				});
