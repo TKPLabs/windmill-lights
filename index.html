@@ -22,9 +22,10 @@
 		<!-- Latest compiled and minified JavaScript -->
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 		<script type="text/javascript">
+			var agenturl = 'https://agent.electricimp.com/vzuZT-B7gmlR';
 			jQuery.support.cors = true;
 			$(function () {
-				$.get('https://agent.electricimp.com/vzuZT-B7gmlR', function (data) {
+				$.get(agenturl, function (data) {
 					var obj = $.parseJSON(data);
 					if(obj.state == 0) {
 						$("#turn-on").hide();
@@ -37,18 +38,17 @@
 			});
 			
 			$("#turn-on").click(function () {
-				$.get('https://agent.electricimp.com/vzuZT-B7gmlR?state=0', function (data) {
+				$.get(agenturl + '?state=0', function (data) {
 					$("#turn-on").hide();
 					$("#turn-off").show();
 				});
 			});
 			$("#turn-off").click(function () {
-				$.get('https://agent.electricimp.com/vzuZT-B7gmlR?state=1', function (data) {
+				$.get(agenturl + '?state=1', function (data) {
 					$("#turn-on").show();
 					$("#turn-off").hide();
 				});
 			});
-			
 		</script>
 	</body>
 </html>
